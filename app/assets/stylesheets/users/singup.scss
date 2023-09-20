@@ -1,0 +1,63 @@
+.sign_up{
+    width: 100%;
+    background-color: aquamarine;
+    padding: 70px 0px;
+    .sign_up_box{
+        width: 880px;
+        height:803px;
+        background-color: rgb(166, 132, 152);
+        margin: auto;
+
+        .title_area{
+            width: 880px;
+            height: 140px;
+            background-color: blue;
+            padding-top: 60px;
+        }
+
+        .title{
+            width: 670px;
+            height: 80;
+            color: aqua;
+            margin: auto;
+            background-color: azure;
+
+            font-size: 36px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .field_area{
+            width: 600px;
+            height: 372px;
+            background-color:darkgray;
+            margin: auto;
+
+            .field{
+                margin-bottom: 40px;
+                .field_input{
+                    width: 596px;
+                    height: 63px;
+                    background-color: white;
+                    border: 0px none;
+
+                    font-size: 24px;
+                    line-height: 63px;
+                }
+
+            }
+
+        }
+        .submit_area{
+            background-color: white;
+            width: 600px;
+            height: 63px;
+
+                .actions{
+                    margin: auto;
+                    width: 200px;
+                    height: 50px;
+                }
+        }
+    }
+}

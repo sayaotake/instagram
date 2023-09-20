@@ -1,0 +1,19 @@
+<%= link_to "新規投稿へ", new_tweet_path %>
+
+<%= link_to 'Tweet一覧へ', tweets_path %>
+
+<% if user_signed_in? %>
+        <%= link_to "マイページへ", user_path(current_user.id) %>
+    <% end %>
+
+<h3>投稿を検索</h3>
+
+<%= form_tag({controller:"tweets",action:"index"}, method: :get) do %>
+  <%= text_field_tag :search %> 
+  <%= select_tag :tag_id, options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),
+  { prompt: 'ジャンルを絞る' } %>
+  <% Topic.all.each do |t| %>
+    <li><%= check_box :topic_ids, t.name %><%= t.name %></li>
+  <% end %>
+  <%= submit_tag '検索する'  %>
+<% end %>
